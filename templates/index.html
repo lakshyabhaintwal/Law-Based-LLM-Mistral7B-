@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🧑‍⚖️ LawBot</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 50px; background: #f9f9f9; }
+        h1 { color: #333; }
+        textarea, input[type="submit"] {
+            font-size: 1rem;
+            padding: 10px;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .response {
+            background: #eef;
+            padding: 15px;
+            border-left: 5px solid #558;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🧑‍⚖️ LawBot: Indian Legal Assistant</h1>
+    <form action="/chat" method="post">
+        <label for="query">Ask a legal question:</label>
+        <textarea name="query" rows="4" placeholder="E.g., What is Section 144 of CrPC?">{{ query or "" }}</textarea>
+        <input type="submit" value="Ask LawBot">
+    </form>
+
+    {% if response %}
+    <div class="response">
+        <strong>LawBot says:</strong>
+        <p>{{ response }}</p>
+    </div>
+    {% endif %}
+</body>
+</html>
