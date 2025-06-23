@@ -1,0 +1,19 @@
+# LLM + Transformers
+transformers>=4.38.0
+peft
+accelerate
+bitsandbytes
+sentence-transformers
+faiss-cpu
+
+# Flask for web backend
+flask
+
+# Hugging Face Datasets
+datasets
+
+# If you used logging, progress bars, etc.
+tqdm
+
+# Optional but safe for GPU
+torch>=2.0
